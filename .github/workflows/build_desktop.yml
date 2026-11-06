@@ -39,14 +39,28 @@ jobs:
       with:
         distribution: 'temurin'
         java-version: '17'
-    - name: Install Linux Dependencies (FUSE for AppImage)
+    - name: Install Linux Dependencies (FUSE & Wget)
       run: |
         sudo apt-get update
-        sudo apt-get install -y libfuse2 patchelf
+        sudo apt-get install -y libfuse2 patchelf wget desktop-file-utils
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Build Linux Distribution
       run: ./gradlew app:packageDistributionForCurrentOS
+    - name: Force Build AppImage via appimagetool if Missing
+      run: |
+        mkdir -p app/build/compose/binaries/main/appimage
+        if ! ls app/build/compose/binaries/main/appimage/*.AppImage 1> /dev/null 2>&1; then
+          echo "Downloading appimagetool..."
+          wget -O appimagetool https://github.com/AppImage/AppImageKit/releases/download/continuous/appimagetool-x86_64.AppImage
+          chmod +x appimagetool
+          
+          APP_DIR=$(find app/build/compose/binaries/main/app -maxdepth 1 -mindepth 1 -type d | head -n 1)
+          if [ -d "$APP_DIR" ]; then
+            echo "Building AppImage from $APP_DIR..."
+            ARCH=x86_64 ./appimagetool "$APP_DIR" app/build/compose/binaries/main/appimage/MrSpeed-1.2.3.AppImage
+          fi
+        fi
     - name: Normalize Linux Artifact Names
       run: |
         mkdir -p app/build/compose/binaries/main/linux-output
