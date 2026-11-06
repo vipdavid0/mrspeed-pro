@@ -43,14 +43,18 @@ jobs:
       run: chmod +x gradlew
     - name: Build Linux Distribution
       run: ./gradlew app:packageDistributionForCurrentOS
+    - name: Normalize Linux Artifact Names
+      run: |
+        mkdir -p app/build/compose/binaries/main/linux-output
+        find app/build/compose/binaries/main -name "*.AppImage" -exec cp {} app/build/compose/binaries/main/linux-output/MrSpeed-1.2.3.AppImage \;
+        find app/build/compose/binaries/main -name "*.deb" -exec cp {} app/build/compose/binaries/main/linux-output/mrspeed_1.2.3-1_amd64.deb \;
+        find app/build/compose/binaries/main -name "*.rpm" -exec cp {} app/build/compose/binaries/main/linux-output/mrspeed-1.2.3-1.x86_64.rpm \;
     - name: Upload Linux Artifacts
       uses: actions/upload-artifact@v4
       with:
         name: desktop-installer-linux
         path: |
-          app/build/compose/binaries/main/appimage/*.AppImage
-          app/build/compose/binaries/main/deb/*.deb
-          app/build/compose/binaries/main/rpm/*.rpm
+          app/build/compose/binaries/main/linux-output/*
 
   build-macos:
     runs-on: macos-latest
@@ -67,10 +71,14 @@ jobs:
       run: chmod +x gradlew
     - name: Build macOS Distribution
       run: ./gradlew app:packageDistributionForCurrentOS
+    - name: Normalize macOS Artifact Names
+      run: |
+        mkdir -p app/build/compose/binaries/main/macos-output
+        find app/build/compose/binaries/main -name "*.dmg" -exec cp {} app/build/compose/binaries/main/macos-output/MrSpeed-1.2.3.dmg \;
+        find app/build/compose/binaries/main -name "*.pkg" -exec cp {} app/build/compose/binaries/main/macos-output/MrSpeed-1.2.3.pkg \;
     - name: Upload macOS Artifacts
       uses: actions/upload-artifact@v4
       with:
         name: desktop-installer-macos
         path: |
-          app/build/compose/binaries/main/dmg/*.dmg
-          app/build/compose/binaries/main/pkg/*.pkg
+          app/build/compose/binaries/main/macos-output/*
