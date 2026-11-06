@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="320dp"
+    android:height="180dp"
+    android:viewportWidth="320"
+    android:viewportHeight="180">
+
+    <path
+        android:pathData="M0,0 h320 v180 h-320 z"
+        android:fillColor="#08080E" />
+
+    <!-- Background Radar Rings (Glow with Indigo) -->
+    <path
+        android:pathData="M160,90m-40,0a40,40 0,1 1,80 0a40,40 0,1 1,-80 0"
+        android:strokeColor="#4D5E5CE6"
+        android:strokeWidth="1" />
+    <path
+        android:pathData="M160,90m-60,0a60,60 0,1 1,120 0a60,60 0,1 1,-120 0"
+        android:strokeColor="#3300E5FF"
+        android:strokeWidth="1" />
+
+    <!-- Center Scanner Point -->
+    <path
+        android:pathData="M160,90m-4,0a4,4 0,1 1,8 0a4,4 0,1 1,-8 0"
+        android:fillColor="#00E5FF" />
+
+    <!-- Pulsing Wave (Indigo to Cyan) -->
+    <path
+        android:pathData="M160,90m-25,0a25,25 0,1 1,50 0a25,25 0,1 1,-50 0"
+        android:strokeWidth="3"
+        android:strokeLineCap="round">
+        <aapt:attr name="android:strokeColor">
+            <gradient
+                android:centerX="160"
+                android:centerY="90"
+                android:gradientRadius="30"
+                android:type="radial">
+                <item android:offset="0.0" android:color="#00E5FF" />
+                <item android:offset="1.0" android:color="#5E5CE6" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- "Mr" Word Representation -->
+    <group
+        android:translateX="40"
+        android:translateY="65">
+        <path
+            android:pathData="M15,40 L15,20 L22,32 L29,20 L29,40"
+            android:strokeColor="#00E5FF"
+            android:strokeWidth="4"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round" />
+        <path
+            android:pathData="M36,40 L36,26 M36,29 C38,25 42,25 44,27"
+            android:strokeColor="#00E5FF"
+            android:strokeWidth="3.5"
+            android:strokeLineCap="round" />
+    </group>
+
+    <!-- "Detector" Word Representation (Indigo Accents) -->
+    <group
+        android:translateX="185"
+        android:translateY="65">
+        <path
+            android:pathData="M10,40 L10,20 C18,20 22,25 22,30 C22,35 18,40 10,40 Z"
+            android:strokeColor="#5E5CE6"
+            android:strokeWidth="4"
+            android:strokeLineCap="round"
+            android:strokeLineJoin="round" />
+        <path
+            android:pathData="M30,35 C28,30 35,30 35,33 C35,36 30,37 32,40"
+            android:strokeColor="#5E5CE6"
+            android:strokeWidth="3.5"
+            android:strokeLineCap="round" />
+    </group>
+
+</vector>

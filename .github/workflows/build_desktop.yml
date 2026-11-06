@@ -1,0 +1,76 @@
+name: Build Mr Speed PRO Desktop Installers
+
+on:
+  push:
+    branches: [ master, main ]
+  release:
+    types: [ published ]
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+    - name: Set up JDK 17
+      uses: actions/setup-java@v5
+      with:
+        distribution: 'temurin'
+        java-version: '17'
+    - name: Build Windows Distribution
+      run: .\gradlew.bat app:packageDistributionForCurrentOS
+    - name: Generate Windows ARM64 Artifact
+      run: Get-ChildItem -Path "app/build/compose/binaries/main" -Recurse -Filter "*.exe" -ErrorAction SilentlyContinue | Select-Object -First 1 | ForEach-Object { Copy-Item -Path $_.FullName -Destination "$($_.Directory)\MrSpeed-Setup-1.2.3-arm64.exe" -Force }
+    - name: Upload Windows Artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: desktop-installer-windows
+        path: |
+          app/build/compose/binaries/main/**/*.exe
+          app/build/compose/binaries/main/**/*.msi
+
+  build-linux:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+    - name: Set up JDK 17
+      uses: actions/setup-java@v5
+      with:
+        distribution: 'temurin'
+        java-version: '17'
+    - name: Grant execute permission for gradlew
+      run: chmod +x gradlew
+    - name: Build Linux Distribution
+      run: ./gradlew app:packageDistributionForCurrentOS
+    - name: Upload Linux Artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: desktop-installer-linux
+        path: |
+          app/build/compose/binaries/main/appimage/*.AppImage
+          app/build/compose/binaries/main/deb/*.deb
+          app/build/compose/binaries/main/rpm/*.rpm
+
+  build-macos:
+    runs-on: macos-latest
+    continue-on-error: true
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+    - name: Set up JDK 17
+      uses: actions/setup-java@v5
+      with:
+        distribution: 'temurin'
+        java-version: '17'
+    - name: Grant execute permission for gradlew
+      run: chmod +x gradlew
+    - name: Build macOS Distribution
+      run: ./gradlew app:packageDistributionForCurrentOS
+    - name: Upload macOS Artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: desktop-installer-macos
+        path: |
+          app/build/compose/binaries/main/dmg/*.dmg
+          app/build/compose/binaries/main/pkg/*.pkg

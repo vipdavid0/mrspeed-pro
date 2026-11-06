@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="50dp"
+    android:viewportWidth="400"
+    android:viewportHeight="100">
+
+    <!-- Left Speed Brush Lines (Amber mapping) -->
+    <path
+        android:pathData="M20,40 L72,40 M8,50 L60,50"
+        android:strokeColor="#FF9F0A"
+        android:strokeWidth="3"
+        android:strokeLineCap="round" />
+
+    <!-- Right Speed Brush Lines (Amber mapping) -->
+    <path
+        android:pathData="M328,35 L380,35 M340,45 L392,45 M332,55 L368,55"
+        android:strokeColor="#FF9F0A"
+        android:strokeWidth="4"
+        android:strokeLineCap="round" />
+
+    <!-- "Mr" Word Representation Vector -->
+    <!-- M -->
+    <path
+        android:pathData="M115,60 L115,40 L122,52 L129,40 L129,60"
+        android:strokeColor="#FF9F0A"
+        android:strokeWidth="4.5"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+    <!-- r -->
+    <path
+        android:pathData="M136,60 L136,46 M136,49 C138,45 142,45 144,47"
+        android:strokeColor="#FF9F0A"
+        android:strokeWidth="4"
+        android:strokeLineCap="round" />
+
+    <!-- "Speed" Bold Word Vector Representation -->
+    <!-- S -->
+    <path
+        android:pathData="M162,43 C155,42 152,47 155,50 C159,53 166,51 164,57 C162,61 155,60 152,57"
+        android:strokeColor="#FF9F0A"
+        android:strokeWidth="6"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+    <!-- p -->
+    <path
+        android:pathData="M174,68 L174,46 M174,51 C176,46 184,46 184,52 C184,58 176,58 174,53"
+        android:strokeColor="#FF9F0A"
+        android:strokeWidth="6"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+    <!-- e -->
+    <path
+        android:pathData="M202,54 L190,54 C190,46 201,45 201,50 C201,57 190,58 192,60"
+        android:strokeColor="#FF9F0A"
+        android:strokeWidth="6"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+    <!-- e -->
+    <path
+        android:pathData="M217,54 L205,54 C205,46 216,45 216,50 C216,57 205,58 207,60"
+        android:strokeColor="#FF9F0A"
+        android:strokeWidth="6"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+    <!-- d -->
+    <path
+        android:pathData="M232,60 L232,38 M232,53 C230,58 221,58 221,52 C221,46 230,46 232,51"
+        android:strokeColor="#FF9F0A"
+        android:strokeWidth="6"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+
+</vector>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="splashBackground">#09090E</color>
+    <color name="appBackground">#121212</color>
+    <color name="textColor">#EEEEEE</color>
+    <color name="loadingColor">#00E5FF</color>
+    <color name="gaugesBackground">#444444</color>
+    <color name="progressBackground">#444444</color>
+    <color name="progressColor">#888888</color>
+    <color name="dlGauge">#00E5FF</color>
+    <color name="dlText">#CCCCCC</color>
+    <color name="ulGauge">#CCCCCC</color>
+    <color name="ulText">#CCCCCC</color>
+    <color name="pingText">#00E5FF</color>
+    <color name="jitterText">#00E5FF</color>
+    <color name="serverText">#AAAAAA</color>
+    <color name="startButton_background">#00E5FF</color>
+    <color name="startButton_text">#121212</color>
+    <color name="failButton_background">#00E5FF</color>
+    <color name="failButton_text">#121212</color>
+    <color name="shareButton_background">#FF7043</color>
+    <color name="shareButton_text">#121212</color>
+    <color name="restartButton_background">#00E5FF</color>
+    <color name="restartButton_text">#121212</color>
+    <color name="privacyLinks">#AAAAAA</color>
+</resources>

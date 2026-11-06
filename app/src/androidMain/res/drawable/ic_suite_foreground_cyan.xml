@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Background Glass Circle -->
+    <path
+        android:pathData="M54,54m-44,0a44,44 0,1 1,88 0a44,44 0,1 1,-88 0"
+        android:fillColor="#1AFFFFFF" />
+
+    <!-- Network Mesh Lines (Indigo) -->
+    <path
+        android:pathData="M54,30 L80,45 L80,63 L54,78 L28,63 L28,45 Z"
+        android:strokeColor="#805E5CE6"
+        android:strokeWidth="1.5" />
+    <path
+        android:pathData="M54,30 L54,78 M80,45 L28,63 M80,63 L28,45"
+        android:strokeColor="#4D5E5CE6"
+        android:strokeWidth="1" />
+
+    <!-- Connection Paths (Glowing Cyan) -->
+    <path
+        android:pathData="M54,54 L54,15 M54,54 L90,34 M54,54 L90,74 M54,54 L54,93 M54,54 L18,74 M54,54 L18,34"
+        android:strokeColor="#00E5FF"
+        android:strokeWidth="2.5"
+        android:strokeLineCap="round" />
+
+    <!-- Satellite Nodes -->
+    <path android:pathData="M54,15m-4,0a4,4 0,1 1,8 0a4,4 0,1 1,-8 0" android:fillColor="#00E5FF" />
+    <path android:pathData="M90,34m-4,0a4,4 0,1 1,8 0a4,4 0,1 1,-8 0" android:fillColor="#00E5FF" />
+    <path android:pathData="M90,74m-4,0a4,4 0,1 1,8 0a4,4 0,1 1,-8 0" android:fillColor="#00E5FF" />
+    <path android:pathData="M54,93m-4,0a4,4 0,1 1,8 0a4,4 0,1 1,-8 0" android:fillColor="#00E5FF" />
+    <path android:pathData="M18,74m-4,0a4,4 0,1 1,8 0a4,4 0,1 1,-8 0" android:fillColor="#00E5FF" />
+    <path android:pathData="M18,34m-4,0a4,4 0,1 1,8 0a4,4 0,1 1,-8 0" android:fillColor="#00E5FF" />
+
+    <!-- Central Master Hub -->
+    <path
+        android:pathData="M54,54m-8,0a8,8 0,1 1,16 0a8,8 0,1 1,-16 0"
+        android:fillColor="#00E5FF"
+        android:strokeColor="#5E5CE6"
+        android:strokeWidth="2" />
+
+</vector>

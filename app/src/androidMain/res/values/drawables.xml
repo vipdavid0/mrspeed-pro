@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Use Light Theme App Icon for Light Splash Screen -->
+    <drawable name="splash_window_logo">@drawable/mr_speed_icon</drawable>
+</resources>

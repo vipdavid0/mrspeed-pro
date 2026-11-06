@@ -1,0 +1,22 @@
+# ====================================================================
+# MR SPEED PRO - ROOT APACHE ROUTER & MINIFICATION ENGINE
+# ====================================================================
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # 1. Dynamic CSS Asset Minification Route
+    RewriteRule ^css/([^/?]+)\.css$ web/minifier_asset.php?type=css&file=$1 [L]
+
+    # 2. Dynamic JS Asset Minification Route
+    RewriteRule ^js/([^/?]+)\.js$ web/minifier_asset.php?type=js&file=$1 [L]
+
+    # 3. Sitemap Route
+    RewriteRule ^sitemap\.xml$ web/sitemap.php [L]
+
+    # 4. Transparent Routing into web/ directory for all other requests
+    RewriteCond %{REQUEST_URI} !^/web/
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ web/$1 [L]
+</IfModule>

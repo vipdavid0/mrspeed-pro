@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Background Circle (Glass effect) -->
+    <path
+        android:pathData="M54,54m-44,0a44,44 0,1 1,88 0a44,44 0,1 1,-88 0"
+        android:fillColor="#1AFFFFFF" />
+
+    <!-- Radar Sweep Effect -->
+    <path
+        android:pathData="M54,54 L54,10 A44,44 0,0 1,98,54 Z"
+        android:strokeWidth="1">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:centerX="54"
+                android:centerY="54"
+                android:gradientRadius="44"
+                android:type="radial">
+                <item android:offset="0.0" android:color="#00FF9F0A" />
+                <item android:offset="1.0" android:color="#4DFF9F0A" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Radar Rings -->
+    <path
+        android:pathData="M54,54m-20,0a20,20 0,1 1,40 0a20,20 0,1 1,-40 0"
+        android:strokeColor="#33FF9F0A"
+        android:strokeWidth="2" />
+    <path
+        android:pathData="M54,54m-35,0a35,35 0,1 1,70 0a35,35 0,1 1,-70 0"
+        android:strokeColor="#26FF9F0A"
+        android:strokeWidth="2" />
+
+    <!-- Detector Bolt/Point -->
+    <path
+        android:pathData="M54,40 L64,54 L54,68 L44,54 Z"
+        android:fillColor="#FF9F0A"
+        android:strokeColor="#FE27A9"
+        android:strokeWidth="1" />
+
+</vector>

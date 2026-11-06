@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Use Stylized Vector Layer for TV Splash Screen to ensure high definition and bypass PNG fallback -->
+    <drawable name="splash_window_logo">@drawable/splash_logo_tv</drawable>
+</resources>

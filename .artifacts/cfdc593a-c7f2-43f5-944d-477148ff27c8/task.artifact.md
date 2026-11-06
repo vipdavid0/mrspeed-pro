@@ -1,0 +1,3 @@
+- `[/]` Phase 1: Finalize centralized strict uniform CSS rules in `mr-speed-theme.css`
+- `[ ]` Phase 2: Refine core PHP page templates (`index.php`, `pricing.php`, `cart.php`, `download.php`, `account.php`, `admin.php`, `login.php`, `register.php`, `tools.php`, `status.php`, `documentation.php`) to use uniform container classes and remove conflicting inline styles
+- `[ ]` Phase 3: Verify light/dark theme consistency, amber button text, invoice tables, toasts, and ensure header, menus, live chat, footer, and custom cursors remain intact

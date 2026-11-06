@@ -1,0 +1,20 @@
+<svg width="180" height="45" viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg" class="main-logo">
+              <defs>
+                <filter id="glow" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="3" result="blur"></feGaussianBlur><feComposite in="SourceGraphic" in2="blur" operator="over"></feComposite></filter>
+                <filter id="strongGlow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="5" result="blur"></feGaussianBlur><feComposite in="SourceGraphic" in2="blur" operator="over"></feComposite></filter>
+                <linearGradient id="leftBrush" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="currentColor" stop-opacity="0"></stop>
+                  <stop offset="100%" stop-color="currentColor" stop-opacity="0.6"></stop>
+                </linearGradient>
+                <linearGradient id="rightBrush" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="currentColor" stop-opacity="0.8"></stop>
+                  <stop offset="100%" stop-color="currentColor" stop-opacity="0"></stop>
+                </linearGradient>
+              </defs>
+              <path d="M20 40 L72 40 M8 50 L60 50" stroke="url(#leftBrush)" stroke-width="3" stroke-linecap="round" fill="none"></path>
+              <text x="200" y="60" text-anchor="middle" font-family="Arial, sans-serif" font-style="italic" fill="currentColor" font-size="42">
+                <tspan font-weight="300" filter="url(#glow)">Mr</tspan>
+                <tspan dx="10" font-weight="900" filter="url(#strongGlow)">Speed</tspan>
+              </text>
+              <path d="M328 35 L380 35 M340 45 L392 45 M332 55 L368 55" stroke="url(#rightBrush)" stroke-width="4" stroke-linecap="round" fill="none"></path>
+            </svg>

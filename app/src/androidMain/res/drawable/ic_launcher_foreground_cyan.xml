@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Background Circle (Glass effect) -->
+    <path
+        android:pathData="M54,54m-44,0a44,44 0,1 1,88 0a44,44 0,1 1,-88 0"
+        android:fillColor="#1AFFFFFF" />
+    <path
+        android:pathData="M54,54m-44,0a44,44 0,1 1,88 0a44,44 0,1 1,-88 0"
+        android:strokeColor="#26FFFFFF"
+        android:strokeWidth="1" />
+
+    <!-- Trailing Speed Lines (Left) - Cyan (#00E5FF) -->
+    <path
+        android:pathData="M11,43.2 L37.8,43.2 M11,54 L32.4,54 M11,64.8 L27,64.8"
+        android:strokeWidth="3"
+        android:strokeLineCap="round">
+        <aapt:attr name="android:strokeColor">
+            <gradient
+                android:startX="11"
+                android:startY="54"
+                android:endX="43"
+                android:endY="54"
+                android:type="linear">
+                <item android:offset="0.0" android:color="#00000000" />
+                <item android:offset="1.0" android:color="#9900E5FF" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Stylized Speed Bolt (Needle) - Cyan (#00E5FF) to Indigo (#5E5CE6) -->
+    <path
+        android:pathData="M48.6,32.4 L81,48.6 L43.2,59.4 L70.2,81"
+        android:strokeWidth="4"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round">
+        <aapt:attr name="android:strokeColor">
+            <gradient
+                android:startX="43.2"
+                android:startY="32.4"
+                android:endX="75.6"
+                android:endY="75.6"
+                android:type="linear">
+                <item android:offset="0.0" android:color="#00E5FF" />
+                <item android:offset="1.0" android:color="#5E5CE6" />
+            </gradient>
+        </aapt:attr>
+    </path>
+</vector>

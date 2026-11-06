@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Outer Professional Telemetry Gauge Rim / Speed Ring -->
+    <path
+        android:pathData="M54,20 C35.22,20 20,35.22 20,54 C20,72.78 35.22,88 54,88 C72.78,88 88,72.78 88,54 C88,43.25 83.01,33.66 75.19,27.42"
+        android:strokeWidth="4.5"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:fillColor="#00000000">
+        <aapt:attr name="android:strokeColor">
+            <gradient
+                android:startX="20"
+                android:startY="54"
+                android:endX="88"
+                android:endY="54"
+                android:type="linear">
+                <item android:offset="0.0" android:color="#00E5FF" />
+                <item android:offset="1.0" android:color="#5E5CE6" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- High-Tech Telemetry Gauge Tick Markers (Speed Indicators) -->
+    <path
+        android:pathData="M27,54 L32,54 M30,40 L34,42 M39,29 L42,33 M54,27 L54,32 M69,29 L66,33 M78,40 L74,42 M81,54 L76,54"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2.5"
+        android:strokeLineCap="round" />
+
+    <!-- Core Dynamic Network Speed Needle Pointing to High Speed -->
+    <path
+        android:pathData="M54,54 L76,32"
+        android:strokeWidth="5"
+        android:strokeLineCap="round">
+        <aapt:attr name="android:strokeColor">
+            <gradient
+                android:startX="54"
+                android:startY="54"
+                android:endX="76"
+                android:endY="32"
+                android:type="linear">
+                <item android:offset="0.0" android:color="#FFFFFF" />
+                <item android:offset="1.0" android:color="#FF9F0A" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Premium Center Centerpiece Hub Ring -->
+    <path
+        android:pathData="M54,54 m-6,0 a6,6 0 1,1 12,0 a6,6 0 1,1 -12,0"
+        android:fillColor="#FFFFFF" />
+
+    <path
+        android:pathData="M54,54 m-3,0 a3,3 0 1,1 6,0 a3,3 0 1,1 -6,0"
+        android:fillColor="#5E5CE6" />
+
+</vector>

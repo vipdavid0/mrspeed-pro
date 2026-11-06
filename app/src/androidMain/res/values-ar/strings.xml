@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation,ExtraTranslation">
+    <string name="app_name">Mr Speed</string>
+    <string name="logo_inapp_link">https://mrspeed.ca/</string>
+    <string name="privacy_policy">file:///android_asset/privacy_en.html</string>
+
+    <!-- App Initialization -->
+    <string name="init_init">جاري التحميل</string>
+    <string name="init_engine">جاري تهيئة المحرك...</string>
+    <string name="initFail_configError">خطأ في التكوين</string>
+    <string name="initFail_retry">إعادة المحاولة</string>
+    <string name="init_selecting">اختيار الخادم</string>
+    <string name="init_calibrating">جاري معايرة المستشعرات...</string>
+    <string name="init_optimizing">جاري تحسين العقد...</string>
+    <string name="init_handshake">جاري إنشاء المصافحة...</string>
+    <string name="init_negotiating">جاري التفاوض على البرتوكولات...</string>
+    <string name="init_scanning">جاري فحص البيئة...</string>
+    <string name="initFail_noServers">لا توجد خوادم متاحة</string>
+    <string name="serverSelect_message">اختر خادمًا</string>
+    <string name="initFail_noInternet">لم يتم العثور على اتصال إنترنت نشط. يرجى التحقق من إعدادات الشبكة.</string>
+
+    <!-- Setup Screen -->
+    <string name="setup_title">مرحبًا بك في Mr Speed</string>
+    <string name="setup_subtitle">دعنا نخصص تجربتك.</string>
+    <string name="setup_choose_language">اللغة</string>
+    <string name="setup_choose_theme">المظهر</string>
+    <string name="setup_continue">ابدأ الآن</string>
+
+    <!-- Core Test Actions -->
+    <string name="start">ابدأ</string>
+    <string name="test_dl">تحميل</string>
+    <string name="test_ul">رفع</string>
+    <string name="test_speedMeasure">ميجابت/ثانية</string>
+    <string name="test_ping">البينج</string>
+    <string name="test_jitter">التذبذب</string>
+    <string name="test_timeMeasure">مللي ثانية</string>
+    <string name="test_share">مشاركة النتيجة</string>
+    <string name="test_restart">اختبار سرعة جديد</string>
+    <string name="testFail_err">حدث خطأ</string>
+    <string name="testFail_retry">حاول مرة أخرى</string>
+    <string name="test_data_used">البيانات المستخدمة: %s</string>
+
+    <!-- History -->
+    <string name="history_title">سجل الاختبارات</string>
+    <string name="history_no_results">لم يتم العثور على نتائج اختبار.</string>
+    <string name="history_delete_confirm_title">مسح السجل</string>
+    <string name="history_delete_confirm_message">هل أنت تأكد من أنك تريد حذف جميع نتائج الاختبار؟</string>
+    <string name="history_delete_confirm_yes">مسح الكل</string>
+    <string name="history_delete_confirm_no">إلغاء</string>
+
+    <!-- Settings -->
+    <string name="settings_title">إعدادات</string>
+    <string name="settings_dl_streams">مسارات التحميل المتوازية</string>
+    <string name="settings_ul_streams">مسارات الرفع المتوازية</string>
+    <string name="settings_ping_count">عدد مرات البينج</string>
+    <string name="settings_use_mebibits">استخدام ميبابايت/ثانية (Mebibits)</string>
+    <string name="settings_show_last_results">إظهار النشاط الأخير على صفحة الاختبار</string>
+    <string name="settings_auto_notify">التنبيه عند الاتصال بشبكة جديدة</string>
+    <string name="notif_title">تم اكتشاف شبكة جديدة</string>
+    <string name="settings_notify_mode">تكرار التنبيه</string>
+    <string name="settings_notify_mode_new">الشبكات الجديدة فقط</string>
+    <string name="settings_notify_mode_reconnect">إعادة الاتصال الذكي (فارق 5 دقائق)</string>
+    <string name="settings_sync_title">الزمن السحابي</string>
+    <string name="settings_sync_logged_in">تم تسجيل الدخول كـ %s</string>
+    <string name="settings_sync_anonymous">مزامنة مجهولة</string>
+    <string name="settings_sync_login">تسجيل الدخول / إنشاء حساب</string>
+    <string name="settings_sync_logout">تسجيل الخروج</string>
+    <string name="settings_preferences">التفضيلات</string>
+    <string name="settings_theme_visuals">المظهر والواجهة</string>
+    <string name="settings_theme_mode">وضع المظهر</string>
+    <string name="settings_primary_neon">اللون النيون الرئيسي</string>
+    <string name="settings_scheduled_tasks">المهام المجدولة</string>
+    <string name="auto_daily_test">الاختبار التلقائي اليومي</string>
+    <string name="settings_wifi_only">عبر الواي فاي فقط</string>
+    <string name="settings_suite_auto_refresh">التحديث التلقائي للمجموعة</string>
+    <string name="settings_view_profile">عرض الملف الشخصي (%s)</string>
+    <string name="settings_haptic">استخدام الاستجابة اللمسية</string>
+    <string name="settings_pro_suite">تفعيل المجموعة الاحترافية</string>
+    <string name="settings_engine_config">محرك الاختبار</string>
+    <string name="settings_sync_login_btn">تسجيل الدخول / إنشاء حساب</string>
+
+    <!-- Auth & Account -->
+    <string name="auth_title">الحساب</string>
+    <string name="auth_email">البريد الإلكتروني</string>
+    <string name="auth_password">كلمة المرور</string>
+    <string name="auth_signin">تسجيل الدخول</string>
+    <string name="auth_signup">إنشاء حساب</string>
+    <string name="auth_error">خطأ في المصادقة: %s</string>
+    <string name="auth_forgot_password">نسيت كلمة المرور؟</string>
+    <string name="auth_no_account">ليس لديك حساب؟ أنشئ حسابًا</string>
+    <string name="auth_have_account">لديك حساب بالفعل؟ سجل الدخول</string>
+    <string name="auth_reset_password_btn">إرسال رابط الاستعادة</string>
+    <string name="auth_verify_email_btn">إرسال بريد التحقق</string>
+    <string name="auth_verified">تم التحقق</string>
+    <string name="auth_not_verified">غير متحقق منه</string>
+    <string name="auth_profile_title">الملف الشخصي</string>
+    <string name="auth_change_email">تغيير البريد الإلكتروني</string>
+    <string name="auth_change_password">تغيير كلمة المرور</string>
+    <string name="auth_current_password">كلمة المرور الحالية</string>
+    <string name="auth_new_email">البريد الإلكتروني الجديد</string>
+    <string name="auth_new_password">كلمة المرور الجديدة</string>
+    <string name="btn_send_recovery">إرسال رابط الاستعادة</string>
+    <string name="auth_update_btn">تحديث</string>
+    <string name="auth_delete_account">حذف الحساب</string>
+    <string name="auth_delete_confirm_title">حذف الحساب؟</string>
+    <string name="auth_delete_confirm_message">سيتم حذف حسابك وإعداداتك وجميع نتائج الاختبارات نهائيًا من السحابة. لا يمكن التراجع عن هذا الإجراء.</string>
+    <string name="auth_delete_confirm_yes">حذف نهائي</string>
+    <string name="auth_delete_confirm_no">إلغاء</string>
+    <string name="auth_email_label">البريد الإلكتروني</string>
+    <string name="auth_password_label">كلمة المرور</string>
+    <string name="auth_forgot_password_link">نسيت كلمة المرور؟</string>
+    <string name="auth_new_to_msg">جديد في MR SPEED؟ أنشئ حسابًا</string>
+    <string name="auth_already_have_msg">لديك حساب بالفعل؟ سجل الدخول</string>
+    <string name="auth_reset_msg">أدخل بريدك الإلكتروني وسنرسل لك رابط الاستعادة.</string>
+    <string name="auth_update_email_title">تحديث البريد الإلكتروني</string>
+    <string name="auth_new_email_label">البريد الإلكتروني الجديد</string>
+    <string name="auth_confirm_password_label">تأكيد كلمة المرور</string>
+    <string name="auth_change_password_title">تغيير كلمة المرور</string>
+    <string name="auth_current_password_label">كلمة المرور الحالية</string>
+    <string name="auth_new_password_label">كلمة المرور الجديدة</string>
+    <string name="auth_cancel_btn">إلغاء</string>
+
+    <string name="detector_title">كاشف انقطاع الخدمة</string>
+    <string name="detector_subtitle">مراقب البنية التحتية العالمية</string>
+    <string name="detector_search_hint">ابحث عن الخدمات أو الفئات...</string>
+    <string name="detector_prioritize_issues">أولوية المشاكل</string>
+    <string name="detector_not_found">غير موجود</string>
+
+    <string name="server_select_title">اختر الخادم</string>
+    <string name="server_searching">جاري البحث عن أفضل الخوادم...</string>
+    <string name="label_searching_node">جاري البحث عن خادم...</string>
+    <string name="label_change_server">تغيير الخادم</string>
+
+    <string name="feature_detector">الكاشف</string>
+    <string name="feature_gaming">الألعاب</string>
+    <string name="feature_tower">البرج</string>
+    <string name="feature_heatmap">خريطة الحرارة</string>
+    <string name="feature_duel">المبارزة</string>
+    <string name="feature_ranking">التصنيف</string>
+    <string name="feature_shield">الحماية</string>
+    <string name="feature_scanqr">مسح QR</string>
+    <string name="feature_ambient">المحيط</string>
+    <string name="feature_streaming">البث</string>
+
+    <string name="theme_system">النظام</string>
+    <string name="theme_light">فاتح</string>
+    <string name="theme_dark">داكن</string>
+    <string name="turnstile_verify_human">Verify you are human</string>
+    <string name="turnstile_threat_shield">Mr Speed Threat Shield</string>
+    <string name="turnstile_title">TURNSTILE</string>
+    <string name="social_continue_facebook">CONTINUE WITH FACEBOOK</string>
+    <string name="twofactor_push">Push</string>
+    <string name="twofactor_auth">Auth</string>
+    <string name="twofactor_whatsapp">WhatsApp</string>
+    <string name="twofactor_telegram">Telegram</string>
+    <string name="twofactor_email">Email</string>
+    <string name="twofactor_recovery">Recovery</string>
+    <string name="terms_policy_agreement">By creating a Mr Speed Pro cloud account you explicitly acknowledge understand and agree to our Terms of Service and Privacy Policy.</string>
+    <string name="terms_of_service">Terms of Service</string>
+    <string name="privacy_policy_link">Privacy Policy</string>
+    <string name="security_2fa_title">SECURITY &amp; TWO-FACTOR AUTHENTICATION (2FA)</string>
+    <string name="twofactor_auth_title">Two-Factor Authentication (2FA)</string>
+    <string name="twofactor_auth_desc">Secure your account with Push, TOTP, Telegram, WhatsApp, or Email OTP</string>
+    <string name="telegram_bot_setup_title">✈️ TELEGRAM 2FA BOT SETUP</string>
+    <string name="telegram_bot_instructions">1. Open our bot @SupremeDevelopementsBot on Telegram.\n2. Press START or send /start to activate.\n3. Enter your Telegram Chat ID or @username below.</string>
+    <string name="launch_telegram_bot">🚀 LAUNCH TELEGRAM BOT (@SupremeDevelopementsBot)</string>
+    <string name="save_tg">SAVE TG</string>
+    <string name="whatsapp_phone_number">💬 WHATSAPP 2FA PHONE NUMBER</string>
+    <string name="save_wa">SAVE WA</string>
+    <string name="setup_google_auth">🔐 SETUP GOOGLE AUTH</string>
+    <string name="recovery_keys">🔑 RECOVERY KEYS</string>
+</resources>

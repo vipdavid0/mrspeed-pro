@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Use Dark Theme App Icon for Dark Splash Screen -->
+    <drawable name="splash_window_logo">@drawable/ic_launcher_foreground_cyan</drawable>
+</resources>
