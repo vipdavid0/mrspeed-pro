@@ -81,7 +81,7 @@ jobs:
           app/build/compose/binaries/main/linux-output/*
 
   build-macos:
-    runs-on: macos-latest
+    runs-on: macos-13
     continue-on-error: true
     steps:
     - name: Checkout Repository
