@@ -58,9 +58,10 @@ jobs:
           APP_DIR=$(find app/build/compose/binaries/main/app -maxdepth 1 -mindepth 1 -type d | head -n 1)
           if [ -d "$APP_DIR" ]; then
             echo "Preparing AppDir structure in $APP_DIR..."
-            echo -e "[Desktop Entry]\nName=Mr Speed PRO\nExec=MrSpeed\nIcon=mr_speed\nType=Application\nCategories=Network;Utility;" > "$APP_DIR/mrspeed.desktop"
+            echo -e "[Desktop Entry]\nName=Mr Speed PRO\nExec=MrSpeed\nIcon=mr_speed\nType=Application\nCategories=Network;" > "$APP_DIR/mrspeed.desktop"
             echo -e "#!/bin/bash\nHERE=\"\$(dirname \"\$(readlink -f \"\${0}\")\")\"\nexec \"\$HERE/bin/MrSpeed\" \"\$@\"" > "$APP_DIR/AppRun"
             chmod +x "$APP_DIR/AppRun"
+            cp app/src/desktopMain/resources/favicon_cyan.png "$APP_DIR/mr_speed.png" 2>/dev/null || true
 
             echo "Building AppImage from $APP_DIR..."
             ARCH=x86_64 ./appimagetool "$APP_DIR" app/build/compose/binaries/main/appimage/MrSpeed-1.2.3.AppImage
