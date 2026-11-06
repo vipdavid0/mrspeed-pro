@@ -39,6 +39,10 @@ jobs:
       with:
         distribution: 'temurin'
         java-version: '17'
+    - name: Install Linux Dependencies (FUSE for AppImage)
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y libfuse2 patchelf
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Build Linux Distribution
