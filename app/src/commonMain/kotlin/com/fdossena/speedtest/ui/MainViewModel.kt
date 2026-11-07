@@ -766,7 +766,20 @@ class MainViewModel(
     }
 
     private fun onTestFinished(result: SpeedtestResult) {
-        viewModelScope.launch {
+        val shareUrlStr = st?.getShareURL(result.testId ?: "")
+        
+        // Reveal test results instantly without waiting for network upload or disk DB I/O
+        updateState { it.copy(
+            testRunning = false,
+            testFinished = true,
+            shareUrl = shareUrlStr,
+            isDlActive = false,
+            isUlActive = false,
+            isPingActive = false
+        ) }
+        serviceStatusRepository.isTesting = false
+
+        viewModelScope.launch(Dispatchers.IO) {
             try {
                 val deviceName = try { syncManager.getDeviceName() } catch (_: Exception) { "Device" }
                 val testResult = TestResult(
@@ -792,7 +805,6 @@ class MainViewModel(
                     playNotificationSound()
                 } catch (_: Exception) {}
 
-                println("MainViewModel: Test finished. Uploading result to cloud...")
                 try {
                     repository.insert(testResult)
                 } catch (e: Exception) {
@@ -802,7 +814,6 @@ class MainViewModel(
                 try {
                     isSyncingTestResult.value = true
                     syncManager.uploadResult(testResult)
-                    println("MainViewModel: Sync Success!")
                 } catch(e: Exception) {
                     println("MainViewModel: Sync Failed: ${e.message}")
                 } finally {
@@ -821,44 +832,8 @@ class MainViewModel(
                         isLightMode = isLight
                     )
                 } catch (_: Exception) {}
-
-                val shareUrlStr = st?.getShareURL(result.testId ?: "")
-
-                if (uiState.value.isTvMode && !uiState.value.isProUser) {
-                    println("MainViewModel: TV Mode test finished. Triggering TV Video Ad before showing results...")
-                    platformService.showTvVideoAd {
-                        println("MainViewModel: TV Video Ad finished/dismissed/blocked. Revealing test results.")
-                        updateState { it.copy(
-                            testRunning = false,
-                            testFinished = true,
-                            shareUrl = shareUrlStr,
-                            isDlActive = false,
-                            isUlActive = false,
-                            isPingActive = false
-                        ) }
-                    }
-                } else {
-                    println("MainViewModel: Test finished (Pro User or Non-TV). Directly revealing test results...")
-                    updateState { it.copy(
-                        testRunning = false,
-                        testFinished = true,
-                        shareUrl = shareUrlStr,
-                        isDlActive = false,
-                        isUlActive = false,
-                        isPingActive = false
-                    ) }
-                }
             } catch (e: Exception) {
-                println("MainViewModel: Critical onTestFinished error: ${e.message}")
-                updateState { it.copy(
-                    testRunning = false,
-                    testFinished = true,
-                    isDlActive = false,
-                    isUlActive = false,
-                    isPingActive = false
-                ) }
-            } finally {
-                serviceStatusRepository.isTesting = false
+                println("MainViewModel: Critical onTestFinished background error: ${e.message}")
             }
         }
     }
