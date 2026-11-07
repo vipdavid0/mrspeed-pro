@@ -182,6 +182,9 @@ compose.desktop {
                 bundleID = "com.mr.speed.test"
                 appCategory = "public.app-category.utilities"
                 minimumSystemVersion = "10.15.0"
+                signing {
+                    sign.set(false)
+                }
             }
         }
     }
