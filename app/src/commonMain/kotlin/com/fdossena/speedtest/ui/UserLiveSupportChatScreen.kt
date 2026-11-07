@@ -720,20 +720,6 @@ fun UserLiveSupportChatScreen(
         )
       }
 
-        // Quick Reply Chips
-        Row(
-            Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 6.dp),
-            horizontalArrangement = Arrangement.spacedBy(6.dp)
-        ) {
-            listOf("🔐 Recover Account", "📊 Speed Test History", "👤 My Account Info", "📡 Outage Detector", "🙋 Talk to Agent").forEach { qrText ->
-                AppSuggestionChip(
-                    onClick = { sendMessage(qrText) },
-                    label = { Text(qrText, fontSize = 11.sp, color = pColor, fontWeight = FontWeight.Bold) },
-                    colors = SuggestionChipDefaults.suggestionChipColors(containerColor = pColor.copy(alpha = 0.15f))
-                )
-            }
-        }
-
         // Pre-Send Voice Note Review Card with Playback & Delete
         if (hasVoiceNoteToReview) {
             Row(
@@ -886,6 +872,20 @@ fun UserLiveSupportChatScreen(
                         trackColor = Color.White.copy(alpha = 0.1f)
                     )
                 }
+            }
+        }
+
+        // Quick Reply Chips
+        Row(
+            Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()).padding(horizontal = 12.dp, vertical = 6.dp),
+            horizontalArrangement = Arrangement.spacedBy(6.dp)
+        ) {
+            listOf("🔐 Recover Account", "📊 Speed Test History", "👤 My Account Info", "📡 Outage Detector", "🙋 Talk to Agent").forEach { qrText ->
+                AppSuggestionChip(
+                    onClick = { sendMessage(qrText) },
+                    label = { Text(qrText, fontSize = 11.sp, color = pColor, fontWeight = FontWeight.Bold) },
+                    colors = SuggestionChipDefaults.suggestionChipColors(containerColor = pColor.copy(alpha = 0.15f))
+                )
             }
         }
 
