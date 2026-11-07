@@ -8,6 +8,7 @@ on:
 jobs:
   build-macos:
     runs-on: macos-13
+    timeout-minutes: 15
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v4
@@ -18,8 +19,8 @@ jobs:
         java-version: '17'
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
-    - name: Build macOS Distribution
-      run: ./gradlew app:packageDistributionForCurrentOS
+    - name: Build macOS Distribution & Installers
+      run: ./gradlew app:packageDistributionForCurrentOS --no-daemon --stacktrace
     - name: Normalize macOS Artifact Names
       run: |
         mkdir -p app/build/compose/binaries/main/macos-output
