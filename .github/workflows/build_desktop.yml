@@ -79,3 +79,30 @@ jobs:
         name: desktop-installer-linux
         path: |
           app/build/compose/binaries/main/linux-output/*
+
+  build-macos:
+    runs-on: macos-13
+    continue-on-error: true
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+    - name: Set up JDK 17
+      uses: actions/setup-java@v5
+      with:
+        distribution: 'temurin'
+        java-version: '17'
+    - name: Grant execute permission for gradlew
+      run: chmod +x gradlew
+    - name: Build macOS Distribution
+      run: ./gradlew app:packageDistributionForCurrentOS
+    - name: Normalize macOS Artifact Names
+      run: |
+        mkdir -p app/build/compose/binaries/main/macos-output
+        find app/build/compose/binaries/main -name "*.dmg" -exec cp {} app/build/compose/binaries/main/macos-output/MrSpeed-1.2.3.dmg \;
+        find app/build/compose/binaries/main -name "*.pkg" -exec cp {} app/build/compose/binaries/main/macos-output/MrSpeed-1.2.3.pkg \;
+    - name: Upload macOS Artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: desktop-installer-macos
+        path: |
+          app/build/compose/binaries/main/macos-output/*
