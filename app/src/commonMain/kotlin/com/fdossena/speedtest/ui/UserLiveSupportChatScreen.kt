@@ -489,7 +489,7 @@ fun UserLiveSupportChatScreen(
     val topBarPadding = if (isDesktop) 48.dp else 0.dp
     val endPadding = if (isDesktop) 110.dp else 16.dp
 
-    Column(Modifier.fillMaxSize().background(screenBg)) {
+    Column(Modifier.fillMaxSize().background(screenBg).statusBarsPadding().imePadding()) {
         // Top Bar
         Row(
             Modifier.fillMaxWidth()
