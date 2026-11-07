@@ -2574,33 +2574,33 @@ fun SettingsScreen(
                 }
             }
 
-            Spacer(Modifier.height(16.dp))
-
-            // APPLICATION VERSION & MANUAL UPDATE CHECK CARD
-            GlassCard(Modifier.fillMaxWidth()) {
-                Column(Modifier.padding(16.dp)) {
-                    Text(tr("APPLICATION VERSION & UPDATES"), style = MaterialTheme.typography.labelMedium, color = pColor, fontWeight = FontWeight.Black, letterSpacing = 1.sp)
-                    Spacer(Modifier.height(8.dp))
-                    Text(
-                        text = "Mr Speed PRO Desktop v1.2.3 (Build 123)",
-                        style = MaterialTheme.typography.labelMedium,
-                        fontWeight = FontWeight.Bold,
-                        color = MaterialTheme.colorScheme.onSurface
-                    )
-                    Spacer(Modifier.height(4.dp))
-                    Text(
-                        text = "Autonomous Background Update Service Active",
-                        style = MaterialTheme.typography.labelSmall,
-                        color = Color.Gray
-                    )
-                    Spacer(Modifier.height(12.dp))
-                    AppButton(
-                        onClick = onCheckForUpdates,
-                        modifier = Modifier.fillMaxWidth().height(48.dp),
-                        shape = RoundedCornerShape(12.dp),
-                        colors = ButtonDefaults.buttonColors(containerColor = pColor)
-                    ) {
-                        Text(tr("CHECK FOR UPDATES"), color = Color.Black, fontWeight = FontWeight.Black, fontSize = 12.sp)
+            if (com.fdossena.speedtest.utils.isDesktop) {
+                Spacer(Modifier.height(16.dp))
+                GlassCard(Modifier.fillMaxWidth()) {
+                    Column(Modifier.padding(16.dp)) {
+                        Text(tr("APPLICATION VERSION & UPDATES"), style = MaterialTheme.typography.labelMedium, color = pColor, fontWeight = FontWeight.Black, letterSpacing = 1.sp)
+                        Spacer(Modifier.height(8.dp))
+                        Text(
+                            text = "Mr Speed PRO Desktop v1.2.3 (Build 123)",
+                            style = MaterialTheme.typography.labelMedium,
+                            fontWeight = FontWeight.Bold,
+                            color = MaterialTheme.colorScheme.onSurface
+                        )
+                        Spacer(Modifier.height(4.dp))
+                        Text(
+                            text = "Autonomous Background Update Service Active",
+                            style = MaterialTheme.typography.labelSmall,
+                            color = Color.Gray
+                        )
+                        Spacer(Modifier.height(12.dp))
+                        AppButton(
+                            onClick = onCheckForUpdates,
+                            modifier = Modifier.fillMaxWidth().height(48.dp),
+                            shape = RoundedCornerShape(12.dp),
+                            colors = ButtonDefaults.buttonColors(containerColor = pColor)
+                        ) {
+                            Text(tr("CHECK FOR UPDATES"), color = Color.Black, fontWeight = FontWeight.Black, fontSize = 12.sp)
+                        }
                     }
                 }
             }
